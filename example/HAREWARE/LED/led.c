@@ -26,10 +26,12 @@ void LED0_OFF(void){
 	GPIO_SetBits(GPIOA,GPIO_Pin_8);
 }
 
+//blue led
 void LED0_ON(void){
 	GPIO_ResetBits(GPIOA,GPIO_Pin_8);
 }
 
+//red led
 void LED1_OFF(void){
 
 	GPIO_SetBits(GPIOD,GPIO_Pin_2);

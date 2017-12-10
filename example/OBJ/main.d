@@ -32,5 +32,4 @@
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\HAREWARE\KEY\key.h
-..\obj\main.o: ..\SYSTEM\usart\usart.h
-..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\HAREWARE\UART\myusart.h

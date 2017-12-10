@@ -2,19 +2,21 @@
 #include  "led.h"
 #include "delay.h"
 #include "key.h"
-#include "usart.h"
+#include "myusart.h"
 
 int main(void)
 {
  
 	delay_init();
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	LED_Init();
 	KEY_init();		
-	uart_init(9600);
+	my_uart_init(115200);
+	
 	while(1){
 
-		u8 key_status = key_scan(0);
-		printf("key_status: %d\n",key_status);
+		u8 key_status = key_scan(1);
+		//printf("key_status: %d\n",key_status);
 		switch(key_status){
 		
 			case KEY0_DOWN: 
