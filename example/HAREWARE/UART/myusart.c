@@ -101,7 +101,7 @@ void my_uart_init(u32 baudrate)
 
 //定义串口接受中断处理函数，函数名USART1_IRQHandler，参考startup_stm32f10x_hd.s，不能顺便改。
 
-void USART1_IRQHandler(void)
+void DELUSART1_IRQHandler(void)
 {
 	u8 res;
 	if(USART_GetITStatus(USART1,USART_IT_RXNE))

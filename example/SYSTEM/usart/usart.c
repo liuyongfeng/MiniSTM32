@@ -127,7 +127,7 @@ void uart_init(u32 bound){
 
 }
 
-void delUSART1_IRQHandler(void)                	//串口1中断服务程序
+void USART1_IRQHandler(void)                	//串口1中断服务程序
 	{
 	u8 Res;
 #if SYSTEM_SUPPORT_OS 		//如果SYSTEM_SUPPORT_OS为真，则需要支持OS.
