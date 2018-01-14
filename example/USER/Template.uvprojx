@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HAREWARE\LED;..\HAREWARE\KEY;..\HAREWARE\UART;..\HAREWARE\EXIT;..\HAREWARE\IWDG</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HAREWARE\LED;..\HAREWARE\KEY;..\HAREWARE\UART;..\HAREWARE\EXIT;..\HAREWARE\IWDG;..\HAREWARE\WWDG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -588,6 +588,11 @@
               <FileName>iwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAREWARE\IWDG\iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\WWDG\wwdg.c</FilePath>
             </File>
           </Files>
         </Group>

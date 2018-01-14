@@ -5,26 +5,23 @@
 //#include "myusart.h"
 #include "usart.h"
 #include "exit.h"
-#include "iwdg.h"
+#include "wwdg.h"
 int main(void)
 {
  	delay_init();
-	//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	LED_Init();
 	KEY_init();		
-	//my_uart_init(115200);
 	uart_init(115200);
-	//EXTIX_Init();
-	IWDG_Init(4,625); //1S
+	LED0 = 1;
+	LED1 = 1;
 	delay_ms(200);
-	LED0_ON();
-	printf("system RESET\n");
+	WWDG_Init(0x7F,0x5F,WWDG_Prescaler_8);
+	
 	while(1){
-		printf("system is Alive\n");
-		if(key_scan(1) != 0){
-			IWDG_ReloadCounter();//如果有按键按下，喂狗
-			printf("feed watchdog\n");
-		}
+
+		LED0 = 0;
 	}
 }
+
 
