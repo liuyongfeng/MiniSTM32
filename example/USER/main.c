@@ -6,6 +6,23 @@
 #include "usart.h"
 #include "exit.h"
 #include "wwdg.h"
+#include "timer.h"
+
+int main(void){
+
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	delay_init();
+	LED_Init();
+	TIM3_Init(4999,7199);
+	while(1){
+		LED1 = !LED1;
+		delay_ms(200);
+	}
+}
+
+
+/*
+//窗口看门狗示例
 int main(void)
 {
  	delay_init();
@@ -23,5 +40,6 @@ int main(void)
 		LED0 = 0;
 	}
 }
+*/
 
 

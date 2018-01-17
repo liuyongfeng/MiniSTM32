@@ -36,3 +36,4 @@
 ..\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HAREWARE\EXIT\exit.h
 ..\obj\main.o: ..\HAREWARE\WWDG\wwdg.h
+..\obj\main.o: ..\HAREWARE\TIMER\timer.h
